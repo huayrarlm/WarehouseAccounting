@@ -59,5 +59,23 @@ namespace WarehouseAccounting.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Администратор.
+        /// </summary>
+        internal static string nameFormAdmin {
+            get {
+                return ResourceManager.GetString("nameFormAdmin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Кладовщик.
+        /// </summary>
+        internal static string nameFormEmployee {
+            get {
+                return ResourceManager.GetString("nameFormEmployee", resourceCulture);
+            }
+        }
     }
 }

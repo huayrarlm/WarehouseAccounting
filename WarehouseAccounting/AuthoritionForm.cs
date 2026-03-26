@@ -4,6 +4,9 @@ using System.Windows.Forms;
 
 namespace WarehouseAccounting
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class AuthoritionForm : Form
     {
         public AuthoritionForm()
@@ -20,8 +23,8 @@ namespace WarehouseAccounting
 
         private void EnterButton_Click(object sender, EventArgs e)
         {
-            string email = txtemail.Text.Trim();
-            string password = txtpassword.Text;
+            var email = txtemail.Text.Trim();
+            var password = txtpassword.Text;
 
             // Проверка: поля заполнены?
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
@@ -35,43 +38,50 @@ namespace WarehouseAccounting
             {
                 using (var db = new ApplicationDBContext())
                 {
-                    // Ищем пользователя с таким email и паролем
-                    var user = db.Users.FirstOrDefault(u => u.email == email && u.password == password);
+                    //Сначала находим пользователя по email
+                    var user = db.Users.FirstOrDefault(u => u.email == email);
 
-                    if (user != null)
+                    //Проверяем, существует ли пользователь
+                    if (user == null)
                     {
-                        // Пользователь найден - вход выполнен
-                        MessageBox.Show($"Добро пожаловать, {user.name}!", "Успех",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Неверный email или пароль", "Ошибка",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
-                        // В зависимости от роли открываем нужную форму
-                        if (user.role == "Администратор")
-                        {
-                            // Открываем форму для администратора
-                            AdminForm adminForm = new AdminForm(user);
-                            adminForm.Show();
-                        }
-                        else
-                        {
-                            // Открываем форму для обычного сотрудника
-                            EmployeeForm employeeForm = new EmployeeForm(user);
-                            employeeForm.Show();
-                        }
+                    // 3. Проверяем пароль с помощью хеширования
+                    bool isPasswordCorrect = PasswordHasher.VerifyPassword(password, user.password);
 
-                        // Скрываем форму входа (не закрываем, чтобы можно было вернуться)
-                        this.Hide();
+                    if (!isPasswordCorrect)
+                    {
+                        MessageBox.Show("Неверный email или пароль", "Ошибка",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // ✅ Успешный вход!
+                    MessageBox.Show($"Добро пожаловать, {user.name}!", "Успех",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // В зависимости от роли открываем нужную форму
+                    if (user.role == "Администратор")
+                    {
+                        AdminForm adminForm = new AdminForm(user);
+                        adminForm.Show();
                     }
                     else
                     {
-                        // Пользователь не найден
-                        MessageBox.Show("Неверный email или пароль", "Ошибка",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        EmployeeForm employeeForm = new EmployeeForm(user);
+                        employeeForm.Show();
                     }
+
+                    // Скрываем форму входа
+                    this.Hide();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при входе: {ex.Message}", "Ошибка",
+                MessageBox.Show($"Ошибка при входе", "Ошибка",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

@@ -36,7 +36,6 @@
             txtname = new TextBox();
             panel3 = new Panel();
             label1 = new Label();
-            panel2 = new Panel();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -50,7 +49,7 @@
             panel1.Controls.Add(txtemail);
             panel1.Controls.Add(txtname);
             panel1.Controls.Add(panel3);
-            panel1.Location = new Point(193, 160);
+            panel1.Location = new Point(195, 113);
             panel1.Name = "panel1";
             panel1.Size = new Size(332, 337);
             panel1.TabIndex = 0;
@@ -134,21 +133,11 @@
             label1.Text = "Регистрация";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(67, 126, 222);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(723, 124);
-            panel2.TabIndex = 1;
-            // 
             // RegisterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(723, 562);
-            Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "RegisterForm";
             Text = "Form2";
@@ -161,7 +150,6 @@
         #endregion
 
         private Panel panel1;
-        private Panel panel2;
         private Label label1;
         private Panel panel3;
         private TextBox txtname;

@@ -1,5 +1,8 @@
 namespace WarehouseAccounting
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class MainForm : Form
     {
         public MainForm()

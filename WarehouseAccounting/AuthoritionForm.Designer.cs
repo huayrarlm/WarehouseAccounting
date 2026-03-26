@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel2 = new Panel();
             panel1 = new Panel();
             EnterButton = new Button();
             txtpassword = new TextBox();
@@ -39,15 +38,6 @@
             panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(67, 126, 222);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(723, 124);
-            panel2.TabIndex = 3;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(217, 217, 217);
@@ -57,13 +47,13 @@
             panel1.Controls.Add(panel3);
             panel1.Location = new Point(195, 168);
             panel1.Name = "panel1";
-            panel1.Size = new Size(332, 337);
+            panel1.Size = new Size(332, 280);
             panel1.TabIndex = 2;
             // 
             // EnterButton
             // 
             EnterButton.Font = new Font("Segoe UI", 12F);
-            EnterButton.Location = new Point(113, 235);
+            EnterButton.Location = new Point(113, 213);
             EnterButton.Name = "EnterButton";
             EnterButton.Size = new Size(107, 37);
             EnterButton.TabIndex = 6;
@@ -120,7 +110,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(723, 562);
-            Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "AuthoritionForm";
             Text = "Form3";
@@ -131,8 +120,6 @@
         }
 
         #endregion
-
-        private Panel panel2;
         private Panel panel1;
         private TextBox txtemail;
         private Panel panel3;
