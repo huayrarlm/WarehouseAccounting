@@ -54,13 +54,13 @@ namespace WarehouseAccounting.Models
         /// <summary>
         /// Клиент, сделавший заказ
         /// </summary>
-        [ForeignKey("ClientId")]
-        public virtual Client Client { get; set; }
+        //[ForeignKey("ClientId")]
+        //public virtual Client Client { get; set; }
 
-        /// <summary>
-        /// Товар, который заказан
-        /// </summary>
-        [ForeignKey("ProductId")]
-        public virtual Product Product { get; set; }
+        ///// <summary>
+        ///// Товар, который заказан
+        ///// </summary>
+        //[ForeignKey("ProductId")]
+        //public virtual Product Product { get; set; }
     }
 }

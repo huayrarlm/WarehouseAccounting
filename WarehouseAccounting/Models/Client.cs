@@ -51,5 +51,17 @@ namespace WarehouseAccounting.Models
         [DataType(DataType.Date)]
         [Display(Name = "Дата регистрации")]
         public DateTime? RegistrationDate { get; set; }
+
+
+        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Shipment> Shipments { get; set; }
+        public virtual ICollection<History> History { get; set; }
+
+        public Client()
+        {
+            Orders = new List<Order>();
+            Shipments = new List<Shipment>();
+            History = new List<History>();
+        }
     }
 }

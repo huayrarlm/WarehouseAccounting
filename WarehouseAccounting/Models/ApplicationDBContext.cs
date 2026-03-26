@@ -44,6 +44,8 @@ namespace WarehouseAccounting
             //Настраиваем таблицу Products
             modelBuilder.Entity<Product>(entity =>
             {
+                entity.ToTable("Products");
+
                 entity.HasKey(e => e.Id);
 
                 entity.Property(e => e.SKU)
@@ -72,7 +74,7 @@ namespace WarehouseAccounting
 
             modelBuilder.Entity<Client>(entity =>
             {
-                entity.ToTable("Client");
+                entity.ToTable("Clients");
 
                 entity.HasKey(e => e.Id);
 
@@ -114,18 +116,18 @@ namespace WarehouseAccounting
                 entity.HasKey(e => e.Id);
 
                 // Внешний ключ на клиента
-                entity.HasOne(e => e.Client)
-                    .WithMany()
-                    .HasForeignKey(e => e.ClientId)
-                    .HasConstraintName("FK_Order_Client_IDклиента")
-                    .OnDelete(DeleteBehavior.Restrict);
+                //entity.HasOne(e => e.Client)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.ClientId)
+                //    .HasConstraintName("FK_Order_Client_IDклиента")
+                //    .OnDelete(DeleteBehavior.Restrict);
 
-                // Внешний ключ на товар
-                entity.HasOne(e => e.Product)
-                    .WithMany()
-                    .HasForeignKey(e => e.ProductId)
-                    .HasConstraintName("FK_Order_Product_IDтовара")
-                    .OnDelete(DeleteBehavior.Restrict);
+                //// Внешний ключ на товар
+                //entity.HasOne(e => e.Product)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.ProductId)
+                //    .HasConstraintName("FK_Order_Product_IDтовара")
+                //    .OnDelete(DeleteBehavior.Restrict);
 
                 // Поля
                 entity.Property(e => e.ClientId)
@@ -171,23 +173,23 @@ namespace WarehouseAccounting
 
                 entity.HasKey(e => e.Id);
 
-                // Связь с Product
-                entity.HasOne(e => e.Product)
-                    .WithMany()
-                    .HasForeignKey(e => e.ProductId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //// Связь с Product
+                //entity.HasOne(e => e.Product)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.ProductId)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
-                // Связь с Client
-                entity.HasOne(e => e.Client)
-                    .WithMany()
-                    .HasForeignKey(e => e.ClientId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //// Связь с Client
+                //entity.HasOne(e => e.Client)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.ClientId)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
-                // Связь с User
-                entity.HasOne(e => e.User)
-                    .WithMany()
-                    .HasForeignKey(e => e.UserId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //// Связь с User
+                //entity.HasOne(e => e.User)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.UserId)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
                 // Настройка полей
                 entity.Property(e => e.SKU)
@@ -231,23 +233,23 @@ namespace WarehouseAccounting
 
                 entity.HasKey(e => e.Id);
 
-                // Связь с Product
-                entity.HasOne(e => e.Product)
-                    .WithMany()
-                    .HasForeignKey(e => e.ProductId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //// Связь с Product
+                //entity.HasOne(e => e.Product)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.ProductId)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
-                // Связь с Client
-                entity.HasOne(e => e.Client)
-                    .WithMany()
-                    .HasForeignKey(e => e.ClientId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //// Связь с Client
+                //entity.HasOne(e => e.Client)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.ClientId)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
-                // Связь с User
-                entity.HasOne(e => e.User)
-                    .WithMany()
-                    .HasForeignKey(e => e.UserId)
-                    .OnDelete(DeleteBehavior.Restrict);
+                //// Связь с User
+                //entity.HasOne(e => e.User)
+                //    .WithMany()
+                //    .HasForeignKey(e => e.UserId)
+                //    .OnDelete(DeleteBehavior.Restrict);
 
                 // Поля
                 entity.Property(e => e.ProductId)

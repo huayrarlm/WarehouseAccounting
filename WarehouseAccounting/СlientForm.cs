@@ -2,6 +2,7 @@
 {
     public partial class СlientForm : Form
     {
+        private User currentUser;
         public СlientForm()
         {
             InitializeComponent();
@@ -37,10 +38,12 @@
             else
             {
                 // Если не открыто — создаем новое
-                var newForm = new OtgruzFormEmployee();
+                var newForm = new OtgruzFormEmployee(currentUser);
                 newForm.Show();
                 this.Close();
             }
         }
+
+
     }
 }
