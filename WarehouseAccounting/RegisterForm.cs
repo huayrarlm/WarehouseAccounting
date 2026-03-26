@@ -1,11 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Linq;
-using System.Windows.Forms;
-using System.Xml.Linq;
-
-namespace WarehouseAccounting
+﻿namespace WarehouseAccounting
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class RegisterForm : Form
     {
         public RegisterForm()
@@ -63,11 +60,14 @@ namespace WarehouseAccounting
                     // Создаем нового пользователя
                     // По умолчанию роль = "Сотрудник" (обычный кладовщик)
                     // Админов можно создавать только через ба  зу данных
+
+                    string hashedPassword = PasswordHasher.HashPassword(password); //ХЕШИРОВАНИЕ ПАРОЛЯ
+
                     var newUser = new User
                     {
                         name = name,
                         email = email,
-                        password = password, // В реальном проекте нужно хешировать!
+                        password = hashedPassword, // В реальном проекте нужно хешировать!
                         role = "Сотрудник"   // По умолчанию обычный пользователь
                     };
 

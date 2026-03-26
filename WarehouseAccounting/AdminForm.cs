@@ -1,8 +1,8 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace WarehouseAccounting
+﻿namespace WarehouseAccounting
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class AdminForm : Form
     {
         private User _currentUser;
@@ -13,7 +13,21 @@ namespace WarehouseAccounting
             _currentUser = user;
 
             // Отображаем имя пользователя в заголовке или на форме
-            this.Text = $"Администратор: {_currentUser.name}";
+            this.Text = $"{Properties.Resources.nameFormAdmin}: {_currentUser.name}";
+        }
+
+        private void buttonKatalog_Click(object sender, EventArgs e)
+        {
+            var formKatalogFormAdmin = new KatalogFormAdmin();
+            formKatalogFormAdmin.Show();
+            this.Hide();
+        }
+
+        private void buttonOtguz_Click(object sender, EventArgs e)
+        {
+            var formOtgruzFormAdmin = new OtgruzFormAdmin();
+            formOtgruzFormAdmin.Show();
+            this.Hide();
         }
     }
 }
