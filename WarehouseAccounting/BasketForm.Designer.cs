@@ -34,14 +34,12 @@
             textBox1 = new TextBox();
             button1 = new Button();
             dataGridView2 = new DataGridView();
-            dataGridView1 = new DataGridView();
             panel4 = new Panel();
             button3 = new Button();
             otgruzPointButton = new Button();
             dataGridView3 = new DataGridView();
             button4 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             SuspendLayout();
@@ -111,14 +109,6 @@
             dataGridView2.Size = new Size(781, 199);
             dataGridView2.TabIndex = 35;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(273, 126);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(683, 212);
-            dataGridView1.TabIndex = 34;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(170, 170, 170);
@@ -185,11 +175,9 @@
             Controls.Add(textBox1);
             Controls.Add(button1);
             Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
             Name = "BasketForm";
             Text = "BasketForm";
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
             ResumeLayout(false);
@@ -203,7 +191,6 @@
         private TextBox textBox1;
         private Button button1;
         private DataGridView dataGridView2;
-        private DataGridView dataGridView1;
         private Panel panel4;
         private Button button3;
         private Button otgruzPointButton;

@@ -31,8 +31,8 @@
             panel4 = new Panel();
             button3 = new Button();
             otgruzPointButton = new Button();
-            dataGridView1 = new DataGridView();
-            dataGridView2 = new DataGridView();
+            dataGridViewOrders = new DataGridView();
+            dataGridViewShipments = new DataGridView();
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
@@ -57,8 +57,8 @@
             button6 = new Button();
             button7 = new Button();
             panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewShipments).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -95,22 +95,22 @@
             otgruzPointButton.UseVisualStyleBackColor = false;
             otgruzPointButton.Click += otgruzPointButton_Click;
             // 
-            // dataGridView1
+            // dataGridViewOrders
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(298, 123);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(683, 212);
-            dataGridView1.TabIndex = 18;
+            dataGridViewOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewOrders.Location = new Point(298, 123);
+            dataGridViewOrders.Name = "dataGridViewOrders";
+            dataGridViewOrders.Size = new Size(683, 212);
+            dataGridViewOrders.TabIndex = 18;
             // 
-            // dataGridView2
+            // dataGridViewShipments
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(298, 436);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.Size = new Size(683, 204);
-            dataGridView2.TabIndex = 19;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
+            dataGridViewShipments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewShipments.Location = new Point(298, 436);
+            dataGridViewShipments.Name = "dataGridViewShipments";
+            dataGridViewShipments.Size = new Size(683, 204);
+            dataGridViewShipments.TabIndex = 19;
+            dataGridViewShipments.CellContentClick += dataGridView2_CellContentClick;
             // 
             // label1
             // 
@@ -361,7 +361,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1021, 642);
+            ClientSize = new Size(1021, 652);
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);
@@ -375,14 +375,14 @@
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(dataGridView2);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewShipments);
+            Controls.Add(dataGridViewOrders);
             Controls.Add(panel4);
             Name = "OtgruzFormEmployee";
             Text = "OtgruzFormEmployee";
             panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewShipments).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -394,8 +394,8 @@
         private Panel panel4;
         private Button button3;
         private Button otgruzPointButton;
-        private DataGridView dataGridView1;
-        private DataGridView dataGridView2;
+        private DataGridView dataGridViewOrders;
+        private DataGridView dataGridViewShipments;
         private Label label1;
         private Label label2;
         private Button button1;

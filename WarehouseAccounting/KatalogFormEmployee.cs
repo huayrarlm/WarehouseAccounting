@@ -10,6 +10,7 @@ namespace WarehouseAccounting
 {
     public partial class KatalogFormEmployee : Form
     {
+        private User currentUser;
         public KatalogFormEmployee()
         {
             InitializeComponent();
@@ -50,7 +51,7 @@ namespace WarehouseAccounting
             else
             {
                 // Если не открыто — создаем новое
-                var newForm = new OtgruzFormEmployee();
+                var newForm = new OtgruzFormEmployee(currentUser);
                 newForm.Show();
                 this.Hide();
             }

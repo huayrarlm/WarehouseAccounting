@@ -13,18 +13,18 @@ namespace WarehouseAccounting
     /// </summary>
     public partial class EmployeeForm : Form
     {
-        private User _currentUser;
+        private User currentUser;
         public EmployeeForm(User user)
         {
             InitializeComponent();
-            _currentUser = user;
+            currentUser = user;
 
-            this.Text = $"{Properties.Resources.nameFormEmployee}: {_currentUser.name}";
+            this.Text = $"{Properties.Resources.nameFormEmployee}: {currentUser.name}";
         }
 
         private void buttonOtguz_Click(object sender, EventArgs e)
         {
-            var formOtgruzFormEmployee = new OtgruzFormEmployee();
+            var formOtgruzFormEmployee = new OtgruzFormEmployee(currentUser);
             formOtgruzFormEmployee.Show();
             this.Hide();
         }
@@ -50,7 +50,7 @@ namespace WarehouseAccounting
 
         private void buttonOtguz_Click_1(object sender, EventArgs e)
         {
-            var formOtgruzEmployee = new OtgruzFormEmployee();
+            var formOtgruzEmployee = new OtgruzFormEmployee(currentUser);
             formOtgruzEmployee.Show();
             this.Hide();
         }

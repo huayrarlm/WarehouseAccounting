@@ -37,23 +37,20 @@ namespace WarehouseAccounting.Models
         [Display(Name = "Текущий остаток")]
         public int Quantity { get; set; }
 
-        //[Display(Name = "Дата создания")]
-        //public DateTime CreatedAt { get; set; }
-
-        //[Display(Name = "Дата обновления")]
-        //public DateTime? UpdatedAt { get; set; }
-
-        //[StringLength(100)]
-        //[Display(Name = "Создал")]
-        //public string CreatedBy { get; set; }
-
-        //[StringLength(100)]
-        //[Display(Name = "Обновил")]
-        //public string UpdatedBy { get; set; }
-
-        // Вычисляемое поле для отображения номера (не хранится в БД)
         [NotMapped]
         [Display(Name = "№")]
         public int RowNumber { get; set; }
+
+
+        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Shipment> Shipments { get; set; }
+        public virtual ICollection<History> History { get; set; }
+
+        public Product()
+        {
+            Orders = new List<Order>();
+            Shipments = new List<Shipment>();
+            History = new List<History>();
+        }
     }
 }

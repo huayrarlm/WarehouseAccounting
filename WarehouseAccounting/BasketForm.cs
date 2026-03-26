@@ -8,11 +8,13 @@ using System.Windows.Forms;
 
 namespace WarehouseAccounting
 {
+
     public partial class BasketForm : Form
     {
+        private User currentUser;
         public BasketForm()
         {
-            InitializeComponent();
+            InitializeComponent();;
         }
 
         private void otgruzPointButton_Click(object sender, EventArgs e)
@@ -45,7 +47,7 @@ namespace WarehouseAccounting
             else
             {
                 // Если не открыто — создаем новое
-                var newForm = new OtgruzFormEmployee();
+                var newForm = new OtgruzFormEmployee(currentUser);
                 newForm.Show();
                 this.Close();
             }
