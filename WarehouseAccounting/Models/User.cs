@@ -1,15 +1,18 @@
-﻿using System;
+﻿using WarehouseAccounting.EnumsRole;
 using WarehouseAccounting.Models;
 
 namespace WarehouseAccounting
 {
+    /// <summary>
+    /// Класс аккаунтов с его значениями
+    /// </summary>
     public class User
     {
         public Guid id { get; set; }    
         public string name { get; set; }         
         public string email { get; set; }         
         public string password { get; set; }      
-        public string role { get; set; }
+        public Role role { get; set; }
 
 
         public virtual ICollection<Order> Orders { get; set; }

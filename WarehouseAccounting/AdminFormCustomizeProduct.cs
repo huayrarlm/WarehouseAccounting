@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using WarehouseAccounting.Models;
+﻿using WarehouseAccounting.Models;
 
 namespace WarehouseAccounting
 {
+    /// <summary>
+    /// форма редактирования товара(для администратора)
+    /// </summary>
     public partial class AdminFormCustomizeProduct : Form
     {
         private void otgruzPointButton_Click(object sender, EventArgs e)
@@ -68,7 +63,7 @@ namespace WarehouseAccounting
             if (_product.Price.HasValue)
                 txtPrice.Text = _product.Price.Value.ToString();
             else
-                txtPrice.Text = "";
+                txtPrice.Text = string.Empty;
         }
 
         private void customizeProductButton_Click(object sender, EventArgs e)
@@ -76,7 +71,7 @@ namespace WarehouseAccounting
             // 1. Проверяем обязательные поля
             if (string.IsNullOrWhiteSpace(txtSKU.Text))
             {
-                MessageBox.Show("Введите артикул товара", "Ошибка",
+                MessageBox.Show(Properties.Resources.InputArticul, Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSKU.Focus();
                 return;
@@ -84,7 +79,7 @@ namespace WarehouseAccounting
 
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                MessageBox.Show("Введите название товара", "Ошибка",
+                MessageBox.Show(Properties.Resources.InputNameProduct, Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtName.Focus();
                 return;
@@ -100,7 +95,7 @@ namespace WarehouseAccounting
                 }
                 else
                 {
-                    MessageBox.Show("Цена должна быть числом", "Ошибка",
+                    MessageBox.Show(Properties.Resources.PriceIsDigital, Properties.Resources.Error,
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtPrice.Focus();
                     return;
@@ -117,7 +112,7 @@ namespace WarehouseAccounting
 
                     if (product == null)
                     {
-                        MessageBox.Show("Товар не найден в базе данных", "Ошибка",
+                        MessageBox.Show(Properties.Resources.ProductNoBD, Properties.Resources.Error,
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
@@ -126,8 +121,8 @@ namespace WarehouseAccounting
                     if (product.SKU != txtSKU.Text.Trim() &&
                         db.Products.Any(p => p.SKU == txtSKU.Text.Trim()))
                     {
-                        MessageBox.Show("Товар с таким артикулом уже существует!",
-                            "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(Properties.Resources.ArticulError,
+                            Properties.Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -141,7 +136,7 @@ namespace WarehouseAccounting
                     db.SaveChanges();
                 }
 
-                MessageBox.Show("Товар успешно обновлен!", "Успех",
+                MessageBox.Show(Properties.Resources.ProductUploading, Properties.Resources.Good,
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Обновляем таблицу на главной форме
@@ -152,7 +147,7 @@ namespace WarehouseAccounting
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при обновлении: {ex.Message}", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorUploading} {ex.Message}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

@@ -1,27 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using WarehouseAccounting.Models;
+﻿using WarehouseAccounting.Models;
 
 namespace WarehouseAccounting
 {
+    /// <summary>
+    /// форма добавлении товара в каталог(для администратор)
+    /// </summary>
     public partial class AdminFormAddProducts : Form
     {
         public AdminFormAddProducts()
         {
             InitializeComponent();
         }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void otgruzPointButton_Click(object sender, EventArgs e)
         {
             // Проверяем, открыто ли уже окно OtgruzFormAdmin
@@ -63,7 +52,7 @@ namespace WarehouseAccounting
             // 1. Проверяем, что все обязательные поля заполнены
             if (string.IsNullOrWhiteSpace(txtSKU.Text))
             {
-                MessageBox.Show("Введите артикул товара", "Ошибка",
+                MessageBox.Show("Введите артикул товара", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSKU.Focus();
                 return;
@@ -71,7 +60,7 @@ namespace WarehouseAccounting
 
             if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                MessageBox.Show("Введите название товара", "Ошибка",
+                MessageBox.Show("Введите название товара", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtName.Focus();
                 return;
@@ -96,7 +85,7 @@ namespace WarehouseAccounting
                 }
                 else
                 {
-                    MessageBox.Show("Цена должна быть числом", "Ошибка",
+                    MessageBox.Show(Properties.Resources.PriceIsDigital, Properties.Resources.Error,
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtPrice.Focus();
                     return;
@@ -112,7 +101,7 @@ namespace WarehouseAccounting
                 }
                 else
                 {
-                    MessageBox.Show("Количество должно быть целым числом", "Ошибка",
+                    MessageBox.Show(Properties.Resources.PriceIsDigital, Properties.Resources.Error,
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtQuantity.Focus();
                     return;
@@ -127,8 +116,8 @@ namespace WarehouseAccounting
                     // Проверяем, нет ли товара с таким артикулом
                     if (db.Products.Any(p => p.SKU == newProduct.SKU))
                     {
-                        MessageBox.Show("Товар с таким артикулом уже существует!",
-                            "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(Properties.Resources.ArticulError,
+                            Properties.Resources.Error, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
@@ -136,7 +125,7 @@ namespace WarehouseAccounting
                     db.SaveChanges();
                 }
 
-                MessageBox.Show("Товар успешно добавлен!", "Успех",
+                MessageBox.Show(Properties.Resources.GoodAdd, Properties.Resources.Good,
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // 6. Очищаем поля для следующего ввода
@@ -147,7 +136,7 @@ namespace WarehouseAccounting
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при добавлении товара: {ex.Message}", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorProduct}: {ex.Message}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -155,12 +144,12 @@ namespace WarehouseAccounting
         // Очистка полей формы
         private void ClearForm()
         {
-            txtSKU.Text = "";
-            txtName.Text = "";
-            txtCategory.Text = "";
-            txtUnit.Text = "";
-            txtPrice.Text = "";
-            txtQuantity.Text = "";
+            txtSKU.Text = string.Empty;
+            txtName.Text = string.Empty;
+            txtCategory.Text = string.Empty;
+            txtUnit.Text = string.Empty;
+            txtPrice.Text = string.Empty;
+            txtQuantity.Text = string.Empty;
             txtSKU.Focus();
         }
 

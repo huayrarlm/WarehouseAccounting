@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 using WarehouseAccounting.Models;
 
 namespace WarehouseAccounting
 {
+    /// <summary>
+    /// Класс отгрузок с его значениями
+    /// </summary>
     public partial class Shipment
     {
         // === Первичный ключ ===

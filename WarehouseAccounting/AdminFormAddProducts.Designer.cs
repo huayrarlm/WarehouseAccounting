@@ -147,7 +147,6 @@
             label3.Size = new Size(136, 25);
             label3.TabIndex = 7;
             label3.Text = "Ед. измерения";
-            label3.Click += label3_Click;
             // 
             // txtCategory
             // 
@@ -255,6 +254,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(686, 609);
+            ControlBox = false;
             Controls.Add(panel4);
             Controls.Add(panel1);
             Margin = new Padding(4, 3, 4, 3);

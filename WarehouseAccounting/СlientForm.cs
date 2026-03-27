@@ -1,5 +1,8 @@
 ﻿namespace WarehouseAccounting
 {
+    /// <summary>
+    /// Форма выбора клиентов для отгрузки
+    /// </summary>
     public partial class СlientForm : Form
     {
         private User currentUser;

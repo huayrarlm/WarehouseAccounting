@@ -1,7 +1,7 @@
 namespace WarehouseAccounting
 {
     /// <summary>
-    /// 
+    /// Основная форма(Добро пожаловать!)
     /// </summary>
     public partial class MainForm : Form
     {

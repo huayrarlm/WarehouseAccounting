@@ -224,7 +224,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
             ClientSize = new Size(686, 609);
+            ControlBox = false;
             Controls.Add(panel4);
             Controls.Add(panel1);
             Name = "AdminFormCustomizeProduct";

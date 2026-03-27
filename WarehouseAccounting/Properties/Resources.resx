@@ -117,10 +117,82 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ArticulError" xml:space="preserve">
+    <value>Товар с таким артикулом уже существует</value>
+  </data>
+  <data name="ClickProductCustomize" xml:space="preserve">
+    <value>"Выберите товар для редактирования"</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Ошибка</value>
+  </data>
+  <data name="ErrorCountSymbolPassword" xml:space="preserve">
+    <value>Пароль должен содержать не менее 4 символов</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>Пользователь с таким email уже существует</value>
+  </data>
+  <data name="ErrorEmailAndPassword" xml:space="preserve">
+    <value>Неверный email или пароль</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>Пароли не совпадают</value>
+  </data>
+  <data name="ErrorProduct" xml:space="preserve">
+    <value>Ошибка загрузки товаров</value>
+  </data>
+  <data name="ErrorRegister" xml:space="preserve">
+    <value>Ошибка при регистрации</value>
+  </data>
+  <data name="ErrorSearch" xml:space="preserve">
+    <value>Ошибка поиска</value>
+  </data>
+  <data name="ErrorToGo" xml:space="preserve">
+    <value>Ошибка при входе</value>
+  </data>
+  <data name="ErrorUploading" xml:space="preserve">
+    <value>Ошибка при обновлении:</value>
+  </data>
+  <data name="Good" xml:space="preserve">
+    <value>Успех!</value>
+  </data>
+  <data name="GoodAdd" xml:space="preserve">
+    <value>Товар успешно добавлен</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Добро пожаловать!</value>
+  </data>
+  <data name="InputArticul" xml:space="preserve">
+    <value>Введите артикул товара</value>
+  </data>
+  <data name="InputEmailAndPassword" xml:space="preserve">
+    <value>Введите email и пароль</value>
+  </data>
+  <data name="InputNameProduct" xml:space="preserve">
+    <value>Введите название товара</value>
+  </data>
+  <data name="InputTextBox" xml:space="preserve">
+    <value>Пожалуйста, заполните все поля</value>
+  </data>
   <data name="nameFormAdmin" xml:space="preserve">
     <value>Администратор</value>
   </data>
   <data name="nameFormEmployee" xml:space="preserve">
     <value>Кладовщик</value>
+  </data>
+  <data name="PriceIsDigital" xml:space="preserve">
+    <value>Цена должна быть числом!</value>
+  </data>
+  <data name="ProductNoBD" xml:space="preserve">
+    <value>Товар не найдет в базе данных</value>
+  </data>
+  <data name="ProductUploading" xml:space="preserve">
+    <value>Товар успешно обновлен</value>
+  </data>
+  <data name="RegisterGood" xml:space="preserve">
+    <value>Регистрация прошла успешно</value>
+  </data>
+  <data name="Warring" xml:space="preserve">
+    <value>Внимание</value>
   </data>
 </root>

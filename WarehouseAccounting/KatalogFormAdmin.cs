@@ -1,14 +1,11 @@
-﻿using System;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
-using System.Windows.Forms;
+﻿using System.Data;
 using WarehouseAccounting.Models;
 
 namespace WarehouseAccounting
 {
+    /// <summary>
+    /// Форма каталог товаров для администратора
+    /// </summary>
     public partial class KatalogFormAdmin : Form
     {
         protected BindingSource productsBindingSource = new BindingSource();
@@ -42,12 +39,13 @@ namespace WarehouseAccounting
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка загрузки товаров: {ex.Message}", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorProduct}: {ex.Message}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
-        /// 
+        /// Публметичный метод для прогрузки таблиц
         /// </summary>
         public void RefreshProducts()
         {
@@ -100,7 +98,7 @@ namespace WarehouseAccounting
             // Проверяем, выбран ли товар
             if (dataGridViewProducts.CurrentRow == null)
             {
-                MessageBox.Show("Выберите товар для редактирования", "Внимание",
+                MessageBox.Show(Properties.Resources.ClickProductCustomize, Properties.Resources.Warring,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -110,7 +108,7 @@ namespace WarehouseAccounting
 
             if (selectedProduct == null)
             {
-                MessageBox.Show("Ошибка: не удалось получить данные товара", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.Error}: {Properties.Resources.ProductNoBD}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -155,14 +153,9 @@ namespace WarehouseAccounting
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorSearch}: {ex.Message}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonGener_Click(object sender, EventArgs e)
@@ -180,7 +173,7 @@ namespace WarehouseAccounting
 
             if (selectedProduct == null)
             {
-                MessageBox.Show("Ошибка: не удалось получить данные товара", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.Error}: {Properties.Resources.ProductNoBD}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
@@ -207,7 +200,7 @@ namespace WarehouseAccounting
 
                     if (product == null)
                     {
-                        MessageBox.Show("Товар не найден в базе данных", "Ошибка",
+                        MessageBox.Show(Properties.Resources.ProductNoBD, Properties.Resources.Error,
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
@@ -217,7 +210,7 @@ namespace WarehouseAccounting
                     db.SaveChanges();
                 }
 
-                MessageBox.Show($"Товар '{selectedProduct.Name}' успешно удален!", "Успех",
+                MessageBox.Show($"Товар '{selectedProduct.Name}' успешно удален!", Properties.Resources.Good,
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // 5. Обновляем таблицу
@@ -225,14 +218,9 @@ namespace WarehouseAccounting
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при удалении товара: {ex.Message}", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorProduct}: {ex.Message}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

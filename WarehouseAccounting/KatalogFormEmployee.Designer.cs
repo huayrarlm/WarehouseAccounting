@@ -98,7 +98,6 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(873, 32);
             txtSearch.TabIndex = 2;
-            txtSearch.TextChanged += textBoxSearch_TextChanged;
             // 
             // panel3
             // 
@@ -190,6 +189,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1021, 569);
+            ControlBox = false;
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(panel1);

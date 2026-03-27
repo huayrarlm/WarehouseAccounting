@@ -1,7 +1,9 @@
-﻿namespace WarehouseAccounting
+﻿using WarehouseAccounting.EnumsRole;
+
+namespace WarehouseAccounting
 {
     /// <summary>
-    /// 
+    /// Форма регистрации
     /// </summary>
     public partial class RegisterForm : Form
     {
@@ -22,7 +24,7 @@
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) ||
                 string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
             {
-                MessageBox.Show("Пожалуйста, заполните все поля", "Ошибка",
+                MessageBox.Show(Properties.Resources.InputTextBox, Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -30,7 +32,7 @@
             // Проверка: пароли совпадают?
             if (password != confirmPassword)
             {
-                MessageBox.Show("Пароли не совпадают", "Ошибка",
+                MessageBox.Show(Properties.Resources.ErrorPassword, Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -38,7 +40,7 @@
             // Проверка: минимальная длина пароля
             if (password.Length < 4)
             {
-                MessageBox.Show("Пароль должен содержать не менее 4 символов", "Ошибка",
+                MessageBox.Show(Properties.Resources.ErrorCountSymbolPassword, Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -52,7 +54,7 @@
                     var existingUser = db.Users.FirstOrDefault(u => u.email == email);
                     if (existingUser != null)
                     {
-                        MessageBox.Show("Пользователь с таким email уже существует", "Ошибка",
+                        MessageBox.Show(Properties.Resources.ErrorEmail, Properties.Resources.Error,
                             MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
@@ -68,14 +70,14 @@
                         name = name,
                         email = email,
                         password = hashedPassword, // В реальном проекте нужно хешировать!
-                        role = "Сотрудник"   // По умолчанию обычный пользователь
+                        role = Role.Сотрудник   // По умолчанию обычный пользователь
                     };
 
                     // Добавляем в базу данных
                     db.Users.Add(newUser);
                     db.SaveChanges();
 
-                    MessageBox.Show("Регистрация прошла успешно!", "Успех",
+                    MessageBox.Show(Properties.Resources.RegisterGood, Properties.Resources.Good,
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Закрываем форму регистрации и возвращаемся к входу
@@ -84,7 +86,7 @@
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при регистрации: {ex.Message}", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorRegister}: {ex.Message}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

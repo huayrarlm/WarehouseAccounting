@@ -110,7 +110,6 @@
             dataGridViewShipments.Name = "dataGridViewShipments";
             dataGridViewShipments.Size = new Size(683, 204);
             dataGridViewShipments.TabIndex = 19;
-            dataGridViewShipments.CellContentClick += dataGridView2_CellContentClick;
             // 
             // label1
             // 
@@ -124,7 +123,6 @@
             label1.Size = new Size(245, 25);
             label1.TabIndex = 20;
             label1.Text = "Информация о клиенте";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -176,7 +174,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(245, 208);
             panel1.TabIndex = 24;
-            panel1.Paint += panel1_Paint;
             // 
             // textBox6
             // 
@@ -262,7 +259,6 @@
             label3.Size = new Size(40, 19);
             label3.TabIndex = 0;
             label3.Text = "ФИО";
-            label3.Click += label3_Click;
             // 
             // button2
             // 
@@ -288,7 +284,6 @@
             label8.Size = new Size(232, 25);
             label8.TabIndex = 26;
             label8.Text = "Товар к отгрузке";
-            label8.Click += label8_Click;
             // 
             // label9
             // 
@@ -362,6 +357,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1021, 652);
+            ControlBox = false;
             Controls.Add(button7);
             Controls.Add(button6);
             Controls.Add(button5);

@@ -1,7 +1,7 @@
 ﻿namespace WarehouseAccounting
 {
     /// <summary>
-    /// 
+    /// Форма меню админ аккаунта(после авторизации)
     /// </summary>
     public partial class AdminForm : Form
     {

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace WarehouseAccounting
 {
+    /// <summary>
+    /// Форма каталог товаров для кладовщика
+    /// </summary>
     public partial class KatalogFormEmployee : Form
     {
         private User currentUser;
@@ -15,11 +12,6 @@ namespace WarehouseAccounting
         {
             InitializeComponent();
             LoadProducts();
-        }
-
-        private void labelSearch_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -71,21 +63,17 @@ namespace WarehouseAccounting
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка загрузки товаров: {ex.Message}", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorProduct}: {ex.Message}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
-        /// 
+        ///Публметичный метод для прогрузки таблиц
         /// </summary>
         public void RefreshProducts()
         {
             LoadProducts();
-        }
-
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -118,7 +106,7 @@ namespace WarehouseAccounting
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка поиска: {ex.Message}", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorSearch}: {ex.Message}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

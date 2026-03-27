@@ -1,11 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+
 
 namespace WarehouseAccounting.Models
 {
+    /// <summary>
+    /// Класс товаров с его значениями
+    /// </summary>
     public partial class Product
     {
         [Key]

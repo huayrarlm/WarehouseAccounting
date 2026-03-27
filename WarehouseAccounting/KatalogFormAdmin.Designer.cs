@@ -178,7 +178,6 @@
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(1670, 32);
             txtSearch.TabIndex = 2;
-            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // dataGridViewProducts
             // 
@@ -252,13 +251,13 @@
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(96, 124);
             listBox1.TabIndex = 16;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // KatalogFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1021, 569);
+            ControlBox = false;
             Controls.Add(panel4);
             Controls.Add(panel3);
             Controls.Add(button2);

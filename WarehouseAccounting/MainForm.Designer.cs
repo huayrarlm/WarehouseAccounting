@@ -39,7 +39,7 @@
             button1.BackColor = Color.FromArgb(217, 217, 217);
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(251, 86);
+            button1.Location = new Point(251, 198);
             button1.Margin = new Padding(0);
             button1.Name = "button1";
             button1.Size = new Size(220, 61);
@@ -53,7 +53,7 @@
             button2.BackColor = Color.FromArgb(217, 217, 217);
             button2.Cursor = Cursors.Hand;
             button2.Font = new Font("Segoe UI", 11F);
-            button2.Location = new Point(251, 193);
+            button2.Location = new Point(251, 305);
             button2.Margin = new Padding(0);
             button2.Name = "button2";
             button2.Size = new Size(220, 60);
@@ -64,12 +64,12 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button2);
-            panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 122);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(723, 440);
+            panel1.Size = new Size(723, 562);
             panel1.TabIndex = 2;
             // 
             // MainForm
@@ -77,9 +77,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(723, 562);
+            ControlBox = false;
             Controls.Add(panel1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "MainForm";
-            Text = "Form1";
+            Text = "Добро пожаловать в Птички-Тупички!";
             panel1.ResumeLayout(false);
             ResumeLayout(false);
         }

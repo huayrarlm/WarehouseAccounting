@@ -1,11 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Forms;
+﻿using WarehouseAccounting.EnumsRole;
 
 namespace WarehouseAccounting
 {
     /// <summary>
-    /// 
+    /// Форма авторизации
     /// </summary>
     public partial class AuthoritionForm : Form
     {
@@ -17,7 +15,7 @@ namespace WarehouseAccounting
         private void btnRegister_Click(object sender, EventArgs e)
         {
             // Открываем форму регистрации
-            RegisterForm registerForm = new RegisterForm();
+            var registerForm = new RegisterForm();
             registerForm.ShowDialog(); // ShowDialog блокирует основную форму до закрытия
         }
 
@@ -29,7 +27,7 @@ namespace WarehouseAccounting
             // Проверка: поля заполнены?
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Введите email и пароль", "Ошибка",
+                MessageBox.Show(Properties.Resources.InputEmailAndPassword, Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -44,7 +42,7 @@ namespace WarehouseAccounting
                     //Проверяем, существует ли пользователь
                     if (user == null)
                     {
-                        MessageBox.Show("Неверный email или пароль", "Ошибка",
+                        MessageBox.Show(Properties.Resources.ErrorEmailAndPassword, Properties.Resources.Error,
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
@@ -54,24 +52,24 @@ namespace WarehouseAccounting
 
                     if (!isPasswordCorrect)
                     {
-                        MessageBox.Show("Неверный email или пароль", "Ошибка",
+                        MessageBox.Show(Properties.Resources.ErrorEmailAndPassword, Properties.Resources.Error,
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
                     // ✅ Успешный вход!
-                    MessageBox.Show($"Добро пожаловать, {user.name}!", "Успех",
+                    MessageBox.Show($"{Properties.Resources.Hello}, {user.name}!", Properties.Resources.Good,
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // В зависимости от роли открываем нужную форму
-                    if (user.role == "Администратор")
+                    if (user.role == Role.Администратор)
                     {
-                        AdminForm adminForm = new AdminForm(user);
+                        var adminForm = new AdminForm(user);
                         adminForm.Show();
                     }
                     else
                     {
-                        EmployeeForm employeeForm = new EmployeeForm(user);
+                        var employeeForm = new EmployeeForm(user);
                         employeeForm.Show();
                     }
 
@@ -81,7 +79,7 @@ namespace WarehouseAccounting
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка при входе", "Ошибка",
+                MessageBox.Show($"{Properties.Resources.ErrorToGo}", Properties.Resources.Error,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

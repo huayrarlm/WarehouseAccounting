@@ -4,7 +4,7 @@ using WarehouseAccounting.Models;
 namespace WarehouseAccounting
 {
     /// <summary>
-    /// 
+    /// ТАБЛИЦЫ ИЗ БД, ПОДКЛЮЧЕНИЕ, СВЯЗЬ
     /// </summary>
     public class ApplicationDBContext : DbContext 
     {
@@ -36,6 +36,10 @@ namespace WarehouseAccounting
                 entity.Property(e => e.email).HasColumnName("email");
                 entity.Property(e => e.password).HasColumnName("password");
                 entity.Property(e => e.role).HasColumnName("role");
+
+                entity.Property(e => e.role)
+                    .HasColumnName("role")
+                    .HasConversion<string>();
 
                 // Устанавливаем уникальность email
                 entity.HasIndex(e => e.email).IsUnique();

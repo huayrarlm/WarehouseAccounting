@@ -61,6 +61,177 @@ namespace WarehouseAccounting.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Товар с таким артикулом уже существует.
+        /// </summary>
+        internal static string ArticulError {
+            get {
+                return ResourceManager.GetString("ArticulError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на &quot;Выберите товар для редактирования&quot;.
+        /// </summary>
+        internal static string ClickProductCustomize {
+            get {
+                return ResourceManager.GetString("ClickProductCustomize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка.
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пароль должен содержать не менее 4 символов.
+        /// </summary>
+        internal static string ErrorCountSymbolPassword {
+            get {
+                return ResourceManager.GetString("ErrorCountSymbolPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пользователь с таким email уже существует.
+        /// </summary>
+        internal static string ErrorEmail {
+            get {
+                return ResourceManager.GetString("ErrorEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Неверный email или пароль.
+        /// </summary>
+        internal static string ErrorEmailAndPassword {
+            get {
+                return ResourceManager.GetString("ErrorEmailAndPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пароли не совпадают.
+        /// </summary>
+        internal static string ErrorPassword {
+            get {
+                return ResourceManager.GetString("ErrorPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка загрузки товаров.
+        /// </summary>
+        internal static string ErrorProduct {
+            get {
+                return ResourceManager.GetString("ErrorProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка при регистрации.
+        /// </summary>
+        internal static string ErrorRegister {
+            get {
+                return ResourceManager.GetString("ErrorRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка поиска.
+        /// </summary>
+        internal static string ErrorSearch {
+            get {
+                return ResourceManager.GetString("ErrorSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка при входе.
+        /// </summary>
+        internal static string ErrorToGo {
+            get {
+                return ResourceManager.GetString("ErrorToGo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ошибка при обновлении:.
+        /// </summary>
+        internal static string ErrorUploading {
+            get {
+                return ResourceManager.GetString("ErrorUploading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Успех!.
+        /// </summary>
+        internal static string Good {
+            get {
+                return ResourceManager.GetString("Good", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Товар успешно добавлен.
+        /// </summary>
+        internal static string GoodAdd {
+            get {
+                return ResourceManager.GetString("GoodAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Добро пожаловать!.
+        /// </summary>
+        internal static string Hello {
+            get {
+                return ResourceManager.GetString("Hello", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите артикул товара.
+        /// </summary>
+        internal static string InputArticul {
+            get {
+                return ResourceManager.GetString("InputArticul", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите email и пароль.
+        /// </summary>
+        internal static string InputEmailAndPassword {
+            get {
+                return ResourceManager.GetString("InputEmailAndPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Введите название товара.
+        /// </summary>
+        internal static string InputNameProduct {
+            get {
+                return ResourceManager.GetString("InputNameProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пожалуйста, заполните все поля.
+        /// </summary>
+        internal static string InputTextBox {
+            get {
+                return ResourceManager.GetString("InputTextBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Администратор.
         /// </summary>
         internal static string nameFormAdmin {
@@ -75,6 +246,51 @@ namespace WarehouseAccounting.Properties {
         internal static string nameFormEmployee {
             get {
                 return ResourceManager.GetString("nameFormEmployee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Цена должна быть числом!.
+        /// </summary>
+        internal static string PriceIsDigital {
+            get {
+                return ResourceManager.GetString("PriceIsDigital", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Товар не найдет в базе данных.
+        /// </summary>
+        internal static string ProductNoBD {
+            get {
+                return ResourceManager.GetString("ProductNoBD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Товар успешно обновлен.
+        /// </summary>
+        internal static string ProductUploading {
+            get {
+                return ResourceManager.GetString("ProductUploading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Регистрация прошла успешно.
+        /// </summary>
+        internal static string RegisterGood {
+            get {
+                return ResourceManager.GetString("RegisterGood", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Внимание.
+        /// </summary>
+        internal static string Warring {
+            get {
+                return ResourceManager.GetString("Warring", resourceCulture);
             }
         }
     }

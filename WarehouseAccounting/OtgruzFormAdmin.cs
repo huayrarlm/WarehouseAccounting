@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-
-namespace WarehouseAccounting
+﻿namespace WarehouseAccounting
 {
+    /// <summary>
+    /// Форма отгрузки для администратора
+    /// </summary>
     public partial class OtgruzFormAdmin : Form
     {
         public OtgruzFormAdmin()

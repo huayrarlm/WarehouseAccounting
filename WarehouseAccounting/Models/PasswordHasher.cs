@@ -4,7 +4,7 @@ using System.Text;
 namespace WarehouseAccounting
 {
     /// <summary>
-    /// 
+    /// ХЭШИПРОВАНИЕ ПАРОЛЕЙ
     /// </summary>
     public static partial class PasswordHasher
     {

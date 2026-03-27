@@ -138,6 +138,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(723, 562);
+            ControlBox = false;
             Controls.Add(panel1);
             Name = "RegisterForm";
             Text = "Form2";
