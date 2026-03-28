@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            categoryButton7 = new Button();
-            categoryButton6 = new Button();
-            categoryButton5 = new Button();
             button2 = new Button();
             buttonGener = new Button();
             buttonGenerate = new Button();
@@ -43,48 +40,11 @@
             otgruzPointButton = new Button();
             button3 = new Button();
             panel4 = new Panel();
-            labelCategory = new Label();
-            panel3 = new Panel();
-            listBox1 = new ListBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).BeginInit();
             panel4.SuspendLayout();
-            panel3.SuspendLayout();
             SuspendLayout();
-            // 
-            // categoryButton7
-            // 
-            categoryButton7.BackColor = Color.Gainsboro;
-            categoryButton7.Font = new Font("Segoe UI", 10F);
-            categoryButton7.Location = new Point(12, 220);
-            categoryButton7.Name = "categoryButton7";
-            categoryButton7.Size = new Size(96, 26);
-            categoryButton7.TabIndex = 21;
-            categoryButton7.Text = "Удалить";
-            categoryButton7.UseVisualStyleBackColor = false;
-            // 
-            // categoryButton6
-            // 
-            categoryButton6.BackColor = Color.Gainsboro;
-            categoryButton6.Font = new Font("Segoe UI", 10F);
-            categoryButton6.Location = new Point(12, 188);
-            categoryButton6.Name = "categoryButton6";
-            categoryButton6.Size = new Size(96, 26);
-            categoryButton6.TabIndex = 20;
-            categoryButton6.Text = "Изменить";
-            categoryButton6.UseVisualStyleBackColor = false;
-            // 
-            // categoryButton5
-            // 
-            categoryButton5.BackColor = Color.Gainsboro;
-            categoryButton5.Font = new Font("Segoe UI", 10F);
-            categoryButton5.Location = new Point(12, 156);
-            categoryButton5.Name = "categoryButton5";
-            categoryButton5.Size = new Size(96, 26);
-            categoryButton5.TabIndex = 19;
-            categoryButton5.Text = "Добавить";
-            categoryButton5.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -221,37 +181,6 @@
             panel4.Size = new Size(1021, 28);
             panel4.TabIndex = 15;
             // 
-            // labelCategory
-            // 
-            labelCategory.AutoSize = true;
-            labelCategory.Font = new Font("Segoe UI", 13F);
-            labelCategory.Location = new Point(12, 0);
-            labelCategory.Name = "labelCategory";
-            labelCategory.Size = new Size(96, 25);
-            labelCategory.TabIndex = 0;
-            labelCategory.Text = "Категории";
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(217, 217, 217);
-            panel3.Controls.Add(listBox1);
-            panel3.Controls.Add(categoryButton7);
-            panel3.Controls.Add(categoryButton6);
-            panel3.Controls.Add(categoryButton5);
-            panel3.Controls.Add(labelCategory);
-            panel3.Location = new Point(18, 253);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(120, 258);
-            panel3.TabIndex = 13;
-            // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(12, 28);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(96, 124);
-            listBox1.TabIndex = 16;
-            // 
             // KatalogFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -259,7 +188,6 @@
             ClientSize = new Size(1021, 569);
             ControlBox = false;
             Controls.Add(panel4);
-            Controls.Add(panel3);
             Controls.Add(button2);
             Controls.Add(buttonGener);
             Controls.Add(buttonGenerate);
@@ -272,8 +200,6 @@
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).EndInit();
             panel4.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -287,14 +213,8 @@
         private TextBox txtSearch;
         private DataGridView dataGridViewProducts;
         private Button button1;
-        private Button categoryButton5;
-        private Button categoryButton7;
-        private Button categoryButton6;
         private Button otgruzPointButton;
         private Button button3;
         private Panel panel4;
-        private Label labelCategory;
-        private Panel panel3;
-        private ListBox listBox1;
     }
 }

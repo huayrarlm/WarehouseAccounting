@@ -66,6 +66,7 @@ namespace WarehouseAccounting
                 return;
             }
 
+
             // 2. Создаем новый товар
             var newProduct = new Product
             {
@@ -81,6 +82,13 @@ namespace WarehouseAccounting
             {
                 if (decimal.TryParse(txtPrice.Text, out decimal price))
                 {
+                    if (price < 0)
+                    {
+                        MessageBox.Show("Цена не может быть отрицательной!", "Ошибка",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        txtPrice.Focus();
+                        return;
+                    }
                     newProduct.Price = price;
                 }
                 else
