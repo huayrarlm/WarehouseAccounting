@@ -195,7 +195,7 @@
             Controls.Add(panel1);
             Controls.Add(dataGridViewProducts);
             Name = "KatalogFormEmployee";
-            Text = "KatalogFormEmployee";
+            Text = "Каталог";
             ((System.ComponentModel.ISupportInitialize)dataGridViewProducts).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

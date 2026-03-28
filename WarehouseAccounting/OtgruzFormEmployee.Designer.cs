@@ -375,7 +375,7 @@
             Controls.Add(dataGridViewOrders);
             Controls.Add(panel4);
             Name = "OtgruzFormEmployee";
-            Text = "OtgruzFormEmployee";
+            Text = "Отгрузка";
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewOrders).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewShipments).EndInit();

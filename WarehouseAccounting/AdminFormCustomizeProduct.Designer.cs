@@ -230,7 +230,7 @@
             Controls.Add(panel4);
             Controls.Add(panel1);
             Name = "AdminFormCustomizeProduct";
-            Text = "AdminFormCustomizeProduct";
+            Text = "Редактирование товара";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel4.ResumeLayout(false);

@@ -137,7 +137,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView2);
             Name = "СlientForm";
-            Text = "СlientForm";
+            Text = "Клиенты";
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ResumeLayout(false);

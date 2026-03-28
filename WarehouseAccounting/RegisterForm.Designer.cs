@@ -141,7 +141,7 @@
             ControlBox = false;
             Controls.Add(panel1);
             Name = "RegisterForm";
-            Text = "Form2";
+            Text = "Регистрация аккаунта";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);

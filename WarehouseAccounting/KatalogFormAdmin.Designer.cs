@@ -266,7 +266,7 @@
             Controls.Add(panel1);
             Controls.Add(dataGridViewProducts);
             Name = "KatalogFormAdmin";
-            Text = "KatalogFormAdmin";
+            Text = "Каталог";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

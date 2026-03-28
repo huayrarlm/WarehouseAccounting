@@ -113,7 +113,7 @@
             ControlBox = false;
             Controls.Add(panel1);
             Name = "AuthoritionForm";
-            Text = "Form3";
+            Text = "Вход в аккаунт";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);

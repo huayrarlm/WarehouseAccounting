@@ -177,7 +177,7 @@
             Controls.Add(button1);
             Controls.Add(dataGridView2);
             Name = "BasketForm";
-            Text = "BasketForm";
+            Text = "Корзина";
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();

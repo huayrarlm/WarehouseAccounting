@@ -38,10 +38,6 @@ namespace WarehouseAccounting.Models
         [Display(Name = "Текущий остаток")]
         public int Quantity { get; set; }
 
-        [NotMapped]
-        [Display(Name = "№")]
-        public int RowNumber { get; set; }
-
 
         public virtual ICollection<Order> Orders { get; set; }
         public virtual ICollection<Shipment> Shipments { get; set; }

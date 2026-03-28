@@ -259,7 +259,7 @@
             Controls.Add(panel1);
             Margin = new Padding(4, 3, 4, 3);
             Name = "AdminFormAddProducts";
-            Text = "AdminFormAddProducts";
+            Text = "Добавление товара";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel4.ResumeLayout(false);

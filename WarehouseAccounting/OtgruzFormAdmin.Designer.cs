@@ -161,7 +161,7 @@
             Controls.Add(panel1);
             Controls.Add(dataGridView1);
             Name = "OtgruzFormAdmin";
-            Text = "OtgruzFormAdmin";
+            Text = "Отгрузка";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
