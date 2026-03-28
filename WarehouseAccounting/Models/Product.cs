@@ -37,17 +37,5 @@ namespace WarehouseAccounting.Models
 
         [Display(Name = "Текущий остаток")]
         public int Quantity { get; set; }
-
-
-        public virtual ICollection<Order> Orders { get; set; }
-        public virtual ICollection<Shipment> Shipments { get; set; }
-        public virtual ICollection<History> History { get; set; }
-
-        public Product()
-        {
-            Orders = new List<Order>();
-            Shipments = new List<Shipment>();
-            History = new List<History>();
-        }
     }
 }

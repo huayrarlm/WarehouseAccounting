@@ -145,7 +145,7 @@
             dataGridViewProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewProducts.Location = new Point(163, 85);
             dataGridViewProducts.Name = "dataGridViewProducts";
-            dataGridViewProducts.Size = new Size(846, 426);
+            dataGridViewProducts.Size = new Size(783, 426);
             dataGridViewProducts.TabIndex = 8;
             // 
             // otgruzPointButton
